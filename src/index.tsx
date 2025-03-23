@@ -20,7 +20,7 @@ microApp.start({
             if (process.env.NODE_ENV === 'development') {
               // 这里 /vite-vue3-ts/ 需要和子应用vite.config.js中base的配置保持一致
               code = code.replace(/(from|import)(\s*['"])(\/app1\/)/g, all => {
-                return all.replace('/app1/', 'http://localhost:3000/')
+                return all.replace('/app1/', `http://localhost:3002/`)
               })
             }
             // code = code.replace(/(from|import)(\s*['"])(\/app1\/)/g, all => {
